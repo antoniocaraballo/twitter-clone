@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+}
+
+nav .nav_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  padding: 12px;
+  border-radius: 50px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 5px;
+}
+nav .nav_link:hover {
+  background: #cacaca;
+  cursor: pointer;
+}
+
+.nav_icon {
+  text-align: center;
+  font-size: 24px;
+  width: 28px;
+  margin-left: 2px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.icon_text {
+  font-size: 20px;
+  padding: 0px 20px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.logo {
+  color: #1d9bf0;
+  font-size: 26px;
+  margin-top: 12px;
+  margin-left: 2px;
+}
+.logo i {
+  padding: 10px;
+  border-radius: 50%;
+}
+.logo i:hover {
+  background: rgba(29, 156, 240, 0.2);
+  cursor: pointer;
+}
+
+.tweet_btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 800;
+  width: 80%;
+  padding: 14px;
+  background: #1d9bf0;
+}
+.tweet_btn:hover {
+  background: #1885ce;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  border-radius: 50px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  margin-bottom: 10px;
+}
+.profile:hover {
+  background: #cacaca;
+  cursor: pointer;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  padding: 5px;
+}
+.profile a {
+  color: #000;
+  text-decoration: none;
+  text-align: right;
+}
+
+.profile_info {
+  margin-left: 10px;
+}
+
+.display_name {
+  font-size: 14px;
+}
+
+.user_name {
+  font-size: 14px;
+}
+
+.main_content {
+  width: 50%;
+  border-right: 0.5px solid rgba(199, 199, 199, 0.5);
+  border-left: 0.5px solid rgba(199, 199, 199, 0.5);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-left: 22%;
+}
+
+.title {
+  font-size: 10px;
+  border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+  padding: 10px;
+}
+
+.tweet_box {
+  border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 15px;
+}
+.tweet_box .profile_pic {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  padding: 5px;
+}
+.tweet_box textarea {
+  border: none;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  height: 50px;
+  padding-top: 10px;
+  outline: none;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+}
+.tweet_box .tweet_links {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  text-align: left;
+}
+.tweet_box .tweet_links a {
+  text-decoration: none;
+  color: #1d9bf0;
+  padding: 10px;
+  border-radius: 50%;
+}
+.tweet_box .tweet_links a:hover {
+  background: rgba(29, 156, 240, 0.2);
+  cursor: pointer;
+}
+.tweet_box .tweet_btn_main {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: right;
+  font-weight: 800;
+  padding: 12px 14px;
+  background: #1d9bf0;
+  border-radius: 50px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+.tweet_box .tweet_btn_main:hover {
+  background: #1885ce;
+}
+.tweet_box .tweet_btn_main a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.feed {
+  border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+  padding: 10px;
+}
+.feed .tweet_info {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 15px;
+}
+.feed .tweet_info .profile_pic {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  padding: 5px;
+  margin-top: 10px;
+}
+.feed .tweet_info .tweet_user {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.feed .tweet_info .tweet_user i {
+  color: #1d9bf0;
+}
+.feed .tweet_info .tweet_user h2 {
+  font-size: 14px;
+  padding-left: 5px;
+  color: grey;
+}
+.feed .tweet_info a {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  justify-self: right;
+  text-decoration: none;
+  color: grey;
+  margin-top: 0;
+}
+.feed .tweet_info a i {
+  padding: 8px;
+  border-radius: 50%;
+}
+.feed .tweet_info a i:hover {
+  background: rgba(29, 156, 240, 0.2);
+  cursor: pointer;
+}
+.feed .tweet_info .tweet_text {
+  grid-column-start: 2;
+  grid-row: 1;
+  margin-top: 30px;
+}
+.feed .tweet_info .tweet_text a {
+  color: #000;
+}
+.feed .tweet_info .tweet_file {
+  grid-column-start: 2;
+  border-radius: 15px;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-height: 300px;
+  cursor: pointer;
+}
+
+.side_content {
+  margin: 5px 20px;
+}
+.side_content .search_bar {
+  padding: 12px;
+  background-color: rgba(199, 199, 199, 0.5);
+  border-radius: 50px;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  border: 1px solid transparent;
+}
+.side_content .search_bar:focus-within {
+  border: 1px solid #1d9bf0;
+  background: #fff;
+}
+.side_content .search_bar:focus-within i {
+  color: #1d9bf0;
+}
+.side_content .search_bar i {
+  font-size: 18px;
+  color: grey;
+  margin: auto;
+  font-weight: lighter;
+}
+.side_content .search_bar input {
+  font-size: 14px;
+  margin-left: 5px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.twitter_users {
+  position: fixed;
+  margin-top: 55px;
+  background: rgba(199, 199, 199, 0.5);
+  padding: 15px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 15px;
+}
+.twitter_users h1 {
+  font-size: 20px;
+}
+.twitter_users a {
+  text-decoration: none;
+  color: #1d9bf0;
+  font-weight: lighter;
+  margin: 15px 0px;
+}
+.twitter_users .users {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 5px 0px;
+}
+.twitter_users .users img {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  padding: 5px;
+}
+.twitter_users .users #users_info {
+  margin: 0px 15px 0px 5px;
+}
+.twitter_users .users #users_info h1 {
+  font-size: 12px;
+}
+.twitter_users .users #users_info h2 {
+  font-size: 12px;
+  color: grey;
+}
+.twitter_users .users #users_info i {
+  color: #1d9bf0;
+}
+.twitter_users .users a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  padding: 12px 14px;
+  background: #000;
+  border-radius: 50px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+
+.messages {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 10px;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(199, 199, 199, 0.7);
+          box-shadow: 0 0 5px 0 rgba(199, 199, 199, 0.7);
+  border-radius: 20px 20px 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.messages i {
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.messages i:hover {
+  background: grey;
+}
