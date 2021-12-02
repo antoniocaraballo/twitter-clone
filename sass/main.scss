@@ -95,6 +95,11 @@ nav {
   width: 80%;
   padding: 14px;
   background: rgb(29, 155, 240);
+  display: flex;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.2s ease;
+  margin-top: 5px;
 
   &:hover {
     background: rgb(24, 133, 206);
@@ -337,7 +342,6 @@ nav {
       font-size: 18px;
       color: grey;
       margin: auto;
-      font-weight: lighter;
     }
 
     input {

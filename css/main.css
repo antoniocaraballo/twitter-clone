@@ -100,6 +100,14 @@ nav .nav_link:hover {
   width: 80%;
   padding: 14px;
   background: #1d9bf0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  border-radius: 50px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  margin-top: 5px;
 }
 .tweet_btn:hover {
   background: #1885ce;
@@ -321,7 +329,6 @@ nav .nav_link:hover {
   font-size: 18px;
   color: grey;
   margin: auto;
-  font-weight: lighter;
 }
 .side_content .search_bar input {
   font-size: 14px;
