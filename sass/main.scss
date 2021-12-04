@@ -105,6 +105,25 @@ nav {
     background: rgb(24, 133, 206);
   }
 }
+// Tweet Btn Mobile
+.tweet_btn_alt {
+  color: #fff;
+  font-size: 26px;
+  margin-top: 12px;
+  margin-left: 2px;
+  visibility: hidden;
+
+  i {
+    background: rgb(29, 155, 240);
+    padding: 12px;
+    border-radius: 50%;
+
+    &:hover {
+      background: rgba(29, 156, 240, 0.2);
+      cursor: pointer;
+    }
+  }
+}
 
 // Profile Info
 
@@ -313,6 +332,15 @@ nav {
       cursor: pointer;
     }
   }
+
+  .tweet_interact {
+    display: flex;
+    grid-column-start: 2;
+
+    a {
+      margin-right: 20%;
+    }
+  }
 }
 
 // Side Content / Right Side
@@ -354,7 +382,7 @@ nav {
   }
 }
 
-// Twitter API Feed
+// More Users
 
 .twitter_users {
   position: fixed;
@@ -440,5 +468,63 @@ nav {
     &:hover {
       background: grey;
     }
+  }
+}
+
+// Mobile View
+
+@media only screen and (max-width: 1200px) {
+  // Hide Content
+
+  // Messages Box
+  .messages {
+    display: none;
+  }
+
+  // Right Side Content
+
+  .side_content {
+    display: none;
+  }
+
+  // Navbar Text
+  .icon_text {
+    display: none;
+  }
+
+  // Navbar Tweet Btn
+  .tweet_btn {
+    display: none;
+  }
+
+  .tweet_btn_alt {
+    visibility: visible;
+  }
+
+  // Profile Info
+  .profile {
+    grid-template-columns: max-content;
+
+    .display_name,
+    .user_name,
+    a {
+      display: none;
+    }
+  }
+
+  //
+  .wrapper {
+    width: 90%;
+  }
+
+  .navbar {
+    // position: relative;
+    align-items: center;
+    width: 10%;
+  }
+
+  .main_content {
+    margin-left: 15%;
+    width: 90%;
   }
 }

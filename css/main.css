@@ -113,6 +113,23 @@ nav .nav_link:hover {
   background: #1885ce;
 }
 
+.tweet_btn_alt {
+  color: #fff;
+  font-size: 26px;
+  margin-top: 12px;
+  margin-left: 2px;
+  visibility: hidden;
+}
+.tweet_btn_alt i {
+  background: #1d9bf0;
+  padding: 12px;
+  border-radius: 50%;
+}
+.tweet_btn_alt i:hover {
+  background: rgba(29, 156, 240, 0.2);
+  cursor: pointer;
+}
+
 .profile {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -305,6 +322,15 @@ nav .nav_link:hover {
   max-height: 300px;
   cursor: pointer;
 }
+.feed .tweet_interact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column-start: 2;
+}
+.feed .tweet_interact a {
+  margin-right: 20%;
+}
 
 .side_content {
   margin: 5px 20px;
@@ -426,4 +452,52 @@ nav .nav_link:hover {
 }
 .messages i:hover {
   background: grey;
+}
+
+@media only screen and (max-width: 1200px) {
+  .messages {
+    display: none;
+  }
+
+  .side_content {
+    display: none;
+  }
+
+  .icon_text {
+    display: none;
+  }
+
+  .tweet_btn {
+    display: none;
+  }
+
+  .tweet_btn_alt {
+    visibility: visible;
+  }
+
+  .profile {
+    grid-template-columns: -webkit-max-content;
+    grid-template-columns: max-content;
+  }
+  .profile .display_name,
+.profile .user_name,
+.profile a {
+    display: none;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  .navbar {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 10%;
+  }
+
+  .main_content {
+    margin-left: 15%;
+    width: 90%;
+  }
 }
